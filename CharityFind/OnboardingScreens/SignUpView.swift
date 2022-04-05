@@ -9,7 +9,17 @@ import SwiftUI
 
 struct SignUpView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            
+            LinearGradient(colors: [.blue, .green], startPoint: .topLeading, endPoint: .bottomTrailing)
+            
+            VStack {
+                
+                Text("Sign Up")
+                    .foregroundColor(.white)
+            }
+        }
+        .ignoresSafeArea()
     }
 }
 

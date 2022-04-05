@@ -9,7 +9,40 @@ import SwiftUI
 
 struct OnboardingView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            
+            LinearGradient(colors: [.blue, .green], startPoint: .topLeading, endPoint: .bottomTrailing)
+            
+            VStack {
+                
+                Spacer()
+                Spacer()
+                
+                Text("Welcome to CharityFind")
+                    .bold()
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                
+                Button {
+                    // start onboarding process
+                } label: {
+                    Text("Get Started")
+                        .foregroundColor(.white)
+                        .fontWeight(.light)
+                }
+                
+                Spacer()
+                
+                Text("Founded in Chapel Hill")
+                    .font(.footnote)
+                    .foregroundColor(.white)
+                
+                Spacer()
+
+            }
+        }
+        .ignoresSafeArea()
     }
 }
 
